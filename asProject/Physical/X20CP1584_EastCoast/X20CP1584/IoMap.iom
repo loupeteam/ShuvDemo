@@ -1,0 +1,14 @@
+VAR_CONFIG
+	::Main:doLED[0] AT %QX."X20DO9321".DigitalOutput01;
+	::Main:doLED[1] AT %QX."X20DO9321".DigitalOutput02;
+	::Main:doLED[2] AT %QX."X20DO9321".DigitalOutput03;
+	::Main:doLED[3] AT %QX."X20DO9321".DigitalOutput04;
+	::Main:doLED[4] AT %QX."X20DO9321".DigitalOutput05;
+	::Main:doLED[5] AT %QX."X20DO9321".DigitalOutput06;
+	::Main:doLED[6] AT %QX."X20DO9321".DigitalOutput07;
+	::Main:doLED[7] AT %QX."X20DO9321".DigitalOutput08;
+	::Main:doLED[8] AT %QX."X20DO9321".DigitalOutput09;
+	::Main:doLED[9] AT %QX."X20DO9321".DigitalOutput10;
+	::Main:doLED[10] AT %QX."X20DO9321".DigitalOutput11;
+	::Main:doLED[11] AT %QX."X20DO9321".DigitalOutput12;
+END_VAR
