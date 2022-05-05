@@ -51,6 +51,11 @@ PROGRAM _CYCLIC
 	updateMgr.updateVersion := shuv.out.updateInfo.version;
 	updateMgr.updateAvailable := (((shuv.out.updateAvailable AND NOT updateMgr.ignoreUpdate) OR shuv.out.updating) AND (updateMgr.updateAllowed));
 	
+	// For the lights off demo system, update automatically.
+	IF ((updateMgr.updateAllowed) AND (updateMgr.updateAvailable)) THEN
+		updateMgr.confirmUpdate := TRUE; // LEt's go!
+	END_IF
+	
 	// Reset commands. 
 	shuv.in.cmd.installUpdate := 0;
 	shuv.in.cmd.acknowledgeError := 0;	
