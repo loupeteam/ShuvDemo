@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Library" Language="Binary">Shuv</Object>
+    <Object Type="Library" Language="Binary" Description="IotMqtt rev04">IotMqtt</Object>
+    <Object Type="Library" Language="Binary">BodyGuard</Object>
+    <Object Type="Library" Language="Binary">BRSE_ARL</Object>
+    <Object Type="Library" Language="Binary">FIOWrap</Object>
+    <Object Type="Library" Language="Binary">jsmn_parse</Object>
+    <Object Type="Library" Language="Binary">LogThat</Object>
+    <Object Type="Library" Language="Binary">StringExt</Object>
+    <Object Type="Library" Language="Binary">IPCfgLib</Object>
+  </Objects>
+</Package>
