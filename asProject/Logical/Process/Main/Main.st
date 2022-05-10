@@ -11,7 +11,7 @@ PROGRAM _CYCLIC
 	IF (timer.Q) THEN
 		timer.IN := FALSE;
 		counter := counter + 1;
-		IF (counter > 12) THEN
+		IF (counter > 6) THEN
 			counter := 0;
 		END_IF
 	END_IF
