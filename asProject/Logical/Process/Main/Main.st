@@ -7,11 +7,11 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	timer.IN := TRUE;
-	timer.PT := T#30ms;
+	timer.PT := T#500ms;
 	IF (timer.Q) THEN
 		timer.IN := FALSE;
 		counter := counter + 1;
-		IF (counter > 6) THEN
+		IF (counter > 12) THEN
 			counter := 0;
 		END_IF
 	END_IF
