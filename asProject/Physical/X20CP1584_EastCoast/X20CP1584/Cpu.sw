@@ -51,7 +51,6 @@
     <LibraryObject Name="ArCert" Source="Shuv.Libraries.AR.ArCert.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsGuard" Source="Shuv.Libraries.AR.AsGuard.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsIO" Source="Shuv.Libraries.AR.AsIO.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Shuv" Source="Shuv.Libraries.External.Shuv.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="IotMqtt" Source="Shuv.Libraries.External.IotMqtt.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="BodyGuard" Source="Shuv.Libraries.External.BodyGuard.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="BRSE_ARL" Source="Shuv.Libraries.External.BRSE_ARL.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -60,5 +59,6 @@
     <LibraryObject Name="LogThat" Source="Shuv.Libraries.External.LogThat.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="StringExt" Source="Shuv.Libraries.External.StringExt.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="IPCfgLib" Source="Shuv.Libraries.External.IPCfgLib.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="Shuv" Source="Shuv.Libraries.External.Shuv.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </Libraries>
 </SwConfiguration>
