@@ -1,0 +1,30 @@
+VAR CONSTANT
+	shuvMAX_MQTT_PUB_CHANNELS : USINT := MQTT_PUB_CH_END;
+	shuvMAI_MQTT_PUB_CHANNELS : USINT := shuvMAX_MQTT_PUB_CHANNELS-1;
+	shuvMAX_MQTT_SUB_CHANNELS : USINT := MQTT_SUB_CH_END;
+	shuvMAI_MQTT_SUB_CHANNELS : USINT := shuvMAX_MQTT_SUB_CHANNELS-1;
+	shuvDEFAULT_LOGGERNAME : STRING[LOG_STRLEN_LOGGERNAME] := 'App';
+	shuvMQTT_SHUV_TOPIC_PREFIX : STRING[80] := 'shuv/things/';
+	shuvMQTT_PROVISION_TOPIC_SUFIX : STRING[80] := '/provision/json';
+	shuvMQTT_PROVISION_TOPIC_PREFIX : STRING[80] := '$$aws/provisioning-templates/';
+	shuvMQTT_CERT_TOPIC_PREFIX : STRING[80] := '$$aws/certificates/';
+	shuvMQTT_CERT_TOPIC : STRING[80] := '$$aws/certificates/create/json';
+	shuvMQTT_SHADOW_TOPIC_PREFIX : STRING[80] := '$$aws/things/';
+	shuvMQTT_GET_VERSION_TOPIC : STRING[80] := '/version/get';
+	shuvMQTT_PUB_TOPICS : ARRAY[0..shuvMAI_MQTT_PUB_CHANNELS] OF STRING[80] := ['/shadow/update','/shadow/get'];
+	shuvMQTT_SUB_TOPICS : ARRAY[0..shuvMAI_MQTT_SUB_CHANNELS] OF STRING[80] := ['/shadow/update/accepted','/shadow/update/rejected','/shadow/update/delta','/shadow/get/accepted','/shadow/get/rejected'];
+	shuvCERT_SIZE : UINT := 4097; (*4096 + 1 for null*)
+	shuvRESPONSE_TIMEOUT : UDINT := 500000;
+	shuvRESET_COUNTDOWN : UDINT := 6000;
+	shuvMQTT_DEFAULT_PORT : UDINT := 8883;
+	shuvMQTT_DEFAULT_IOT_ENDPOINT : STRING[80] := 'a29pmho7ucy6qv-ats.iot.us-west-2.amazonaws.com';
+	shadowOFFLINE_PUB_BUFFER : UDINT := 100;
+	shadowCONNECT_TIMEOUT : UDINT := 120000;
+	shadowKEEP_ALIVE_INTERVAL : UDINT := 10000;
+	shuvCERT_DEVICE_ROOT : STRING[80] := '//CS:EXT/root-certificate.pem';
+	shuvCERT_DEVICE_CERT : STRING[80] := '//CS:OWN/thing-certificate.pem.crt';
+	shuvCERT_DEVICE_PRIVATE : STRING[80] := '//CS:KEY/thing-private.pem.key';
+	shuvCERT_DEVICE_ROOT_NAME : STRING[80] := 'root-certificate.pem';
+	shuvCERT_DEVICE_CERT_NAME : STRING[80] := 'thing-certificate.pem.crt';
+	shuvCERT_DEVICE_PRIVATE_NAME : STRING[80] := 'thing-private.pem.key';
+END_VAR

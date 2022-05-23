@@ -7,7 +7,7 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	timer.IN := TRUE;
-	timer.PT := T#500ms;
+	timer.PT := T#50ms;
 	IF (timer.Q) THEN
 		timer.IN := FALSE;
 		counter := counter + 1;
