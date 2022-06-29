@@ -37,9 +37,6 @@ RSProject/
 *.set
 !**/Physical/**/*.set
 
-# RevInfo variables
-*RevInfo.var
-
 # Logging
 **/DataLog/Logs/**/*.csv
 
