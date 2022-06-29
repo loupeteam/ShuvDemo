@@ -25,8 +25,8 @@ END_VAR
 (*Customizable constants*)
 VAR CONSTANT
 	iotLOGGER_NAME : STRING[80] := 'IoT';
-	iotPIPELINE : STRING[80] := 'ShuvSafety';
-	iotORGANIZATION : STRING[80] := 'AmazonRobotics';
+	iotPIPELINE : STRING[80] := 'ShuvDemo';
+	iotORGANIZATION : STRING[80] := 'Guest';
 END_VAR
 (**)
 (*User settable constants*)
