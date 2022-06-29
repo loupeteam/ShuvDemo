@@ -17,6 +17,13 @@ PROGRAM _INIT
 	shuv.in.cfg.claimCredentials.certificateFilename := '//CS:OWN/claim-certificate.pem.crt'; // path of the device's certificate (default points to certificate store)
 	shuv.in.cfg.claimCredentials.privateKeyFilename := '//CS:KEY/claim-private.pem.key'; // path of the device's private key (default points to certificate store)	
 	
+	// Configure the ShuvSafety block. 
+	shuvSafety.in.cfg.active := TRUE;
+	shuvSafety.in.cfg.pSfDomain := ADR(gSafeDomain);
+	shuvSafety.in.cfg.safeApplication := 'SdProject.sfapp';
+	shuvSafety.in.cfg.safetyPassword := 'password';
+	shuvSafety.in.cfg.safetyUsername := 'Admin';
+	
 	// Initialize the Shuv tunnel.
 	ShuvInit(shuv);
 	
@@ -40,21 +47,40 @@ PROGRAM _CYCLIC
 	// Logic for handling the HMI integration with the update. 
 	HmiDialog;	
 	
+	shuvSafety.in.cmd.acknowledgeError := diReset;
+	shuvSafety.in.par.pShadow := shuv.out.pShadow;
+	shuvSafety.in.par.pInterface := shuv.out.pInterface;
+	shuvSafety.in.par.safeApplicationRunning := gSafety.in.safePlcOk AND gSafety.in.safeApplicationRunning;
+	
+	shuv.in.cmd.installUpdate := diConfirmUpdate;
+	shuv.in.cmd.acknowledgeError := diReset;
+	shuvSafety.in.cmd.installUpdate := diConfirmSafetyUpdate;
+	
 	// Call all FUBs cyclically. 
 	ShuvCyclic(shuv);
+	ShuvSafetyCyclic(shuvSafety);
 	Diagnose(diag);
 	FIOManageFn_Cyclic(fioManage);
 	
-	// Customizable logic to determine when updating is allowed (i.e. while machine is stopped, overnight, etc). 
-	updateMgr.updateAllowed := TRUE; // ((gMachine.OUT.State = MACH_ST_ABORTED OR gMachine.OUT.State = MACH_ST_STOPPED));
-	updateMgr.ignoreUpdate := updateMgr.ignoreUpdate AND (updateMgr.updateVersion = shuv.out.updateInfo.version);
-	updateMgr.updateVersion := shuv.out.updateInfo.version;
-	updateMgr.updateAvailable := (((shuv.out.updateAvailable AND NOT updateMgr.ignoreUpdate) OR shuv.out.updating) AND (updateMgr.updateAllowed));
-	
-	// For the lights off demo system, update automatically.
-	IF ((updateMgr.updateAllowed) AND (updateMgr.updateAvailable)) THEN
-		updateMgr.confirmUpdate := TRUE; // LEt's go!
-	END_IF
+	IF (shuv.out.updating) THEN
+		gLedCtrl.mode := keyringLED_MODE_ROTATE;
+		gLedCtrl.color := keyringLED_COLOR_WHITE;
+	ELSIF (shuvSafety.out.updating) THEN
+		gLedCtrl.mode := keyringLED_MODE_ROTATE;
+		gLedCtrl.color := keyringLED_COLOR_YELLOW;
+	ELSE
+		gLedCtrl.mode := keyringLED_MODE_DIRECT;
+		IF ((shuv.out.updateAvailable) AND (blink)) THEN
+			gLedCtrl.led[4] := keyringLED_COLOR_WHITE;
+		ELSE
+			gLedCtrl.led[4] := keyringLED_COLOR_OFF;
+		END_IF
+		IF ((shuvSafety.out.updateAvailable) AND (blink)) THEN
+			gLedCtrl.led[3] := keyringLED_COLOR_YELLOW;
+		ELSE
+			gLedCtrl.led[3] := keyringLED_COLOR_OFF;
+		END_IF
+	END_IF	
 	
 	// Reset commands. 
 	shuv.in.cmd.installUpdate := 0;
@@ -62,6 +88,15 @@ PROGRAM _CYCLIC
 	fioManage.IN.CMD.AcknowledgeError := 0;
 	fioManage.IN.CMD.DeleteAll := 0;
 	fioManage.IN.CMD.Scan := 0;
+	
+	// Blink timer utility. 
+	blinkTimer.IN := TRUE;
+	blinkTimer.PT := T#750ms;
+	IF (blinkTimer.Q) THEN
+		blinkTimer.IN := FALSE;
+		blink := NOT blink;
+	END_IF
+	blinkTimer();
 	 
 END_PROGRAM
 

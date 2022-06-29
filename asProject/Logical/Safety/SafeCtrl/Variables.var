@@ -1,0 +1,8 @@
+VAR
+	blinkTimer : TON;
+	blink : BOOL;
+	diReset : BOOL;
+	safetyCircuitOk : BOOL;
+	allEStopsOk : BOOL;
+	resetFromPlc : BOOL;
+END_VAR

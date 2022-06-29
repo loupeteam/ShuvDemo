@@ -11,6 +11,7 @@
     <Object Type="Library" Language="Binary" Description="The AsIODiag library provides functions for creating and evaluating I/O module information.">AsIODiag</Object>
     <Object Type="Library" Language="Binary" Description="The AsZip library offers compressing archive-support">AsZip</Object>
     <Object Type="Library" Language="Binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
+    <Object Type="Library" Language="Binary" Description="The SYS_LIB library contains functions for memory management and operating system manipulation as well as hardware-specific functions.">sys_lib</Object>
     <Object Type="Library" Language="binary" Description="This library contains FBKs for pinging a station.">AsICMP</Object>
     <Object Type="Library" Language="binary" Description="Read information about the project currently installed on the target">ArProject</Object>
     <Object Type="Library" Language="binary" Description="Information about the respective target system can be read using the AsHW library.">AsHW</Object>

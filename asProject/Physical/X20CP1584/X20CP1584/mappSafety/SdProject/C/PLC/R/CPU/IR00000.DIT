@@ -1,0 +1,70 @@
+(*
+T: RESOURCE CPU
+FW: NO
+CI#: 0
+QSL: 10
+QVE: 10
+QVPC: 10
+QPar: 0
+QFBI: 0
+*)
+@V 1 2 0
+siEStop	1	VAR_GLOBAL	@TYP:43
+%SIX 8.0		     
+
+;
+
+@V 1 3 0
+soLED	2	VAR_GLOBAL	@TYP:43
+%SQX 1.0		     
+
+;
+
+@V 1 4 0
+srLED	3	VAR_GLOBAL	@TYP:1
+%NSQX 516.0		     
+
+;
+
+@V 1 5 0
+resetFromPLC	4	VAR_GLOBAL	@TYP:1
+%NSIX 0.0		     
+
+;
+
+@V 1 6 0
+soLED2	5	VAR_GLOBAL	@TYP:43
+%SQX 1.1		     
+
+;
+
+@V 1 7 0
+safetyCircuitOK	6	VAR_GLOBAL	@TYP:1
+%NSQX 0.0		     
+
+;
+
+@V 1 8 0
+allEStopsOk	7	VAR_GLOBAL	@TYP:1
+%NSQX 0.1		     
+
+;
+
+@V 1 9 0
+soLED3	8	VAR_GLOBAL	@TYP:43
+%SQX 1.2		     
+
+;
+
+@V 1 10 0
+soLED4	9	VAR_GLOBAL	@TYP:43
+%SQX 1.3		     
+
+;
+
+@V 1 11 0
+safeApplicationRunning	10	VAR_GLOBAL	@TYP:1
+%NSQX 0.2		     
+
+;
+

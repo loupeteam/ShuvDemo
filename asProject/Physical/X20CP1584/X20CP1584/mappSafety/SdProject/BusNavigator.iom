@@ -1,0 +1,20 @@
+<!--xml version= "1.0" encoding="utf-8"-->
+<!--IOMapping Version="4.0"-->
+<IOOffsets SIBytes="6144" SOBytes="2048" NSIBytes="1024" NSOBytes="1024" ConnectionsValidOffset="4" >
+		<Module Name="SL1.SM1" Hardware="X20SL8101" SafeLogicID="1" SafeModuleID="1" SISize="1" SOSize="1" NSISize="516" NSOSize="516" SIOffset="5" SOOffset="0" NSIOffset="0" NSOOffset="0" ExtendedSourceSL="1" HWTypeCode="5" >
+			<Channel Name="BOOL00001" Mapping="NSQX0.0" Variable="safetyCircuitOK" Address="gSafety.in.safetyCircuitOk" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00002" Mapping="NSQX0.1" Variable="allEStopsOk" Address="gSafety.in.allEStopsOk" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL00003" Mapping="NSQX0.2" Variable="safeApplicationRunning" Address="gSafety.in.safeApplicationRunning" SODIndex="0x2580" SODSubIndex="0x1" />
+			<Channel Name="BOOL10001" Mapping="NSIX0.0" Variable="resetFromPLC" Address="gSafety.out.resetFromPlc" SODIndex="0x2500" SODSubIndex="0x1" />
+		</Module>
+		<Module Name="SL1.SM2" Hardware="X20SO4110" SafeLogicID="1" SafeModuleID="2" SISize="1" SOSize="1" NSISize="1" NSOSize="1" SIOffset="6" SOOffset="1" NSIOffset="516" NSOOffset="516" ConnectionValidBitNumber="0" HWTypeCode="43" >
+			<Channel Name="SafeDigitalOutput01" Mapping="SQX1.0" Variable="soLED" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput02" Mapping="SQX1.1" Variable="soLED2" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput03" Mapping="SQX1.2" Variable="soLED3" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="SafeDigitalOutput04" Mapping="SQX1.3" Variable="soLED4" SODIndex="0x6200" SODSubIndex="0x1" />
+			<Channel Name="ReleaseOutput" Mapping="NSQX516.0" Variable="srLED" SODIndex="0x6200" SODSubIndex="0x3" />
+		</Module>
+		<Module Name="SL1.SM3" Hardware="X20SI9100" SafeLogicID="1" SafeModuleID="3" SISize="8" SOSize="0" NSISize="0" NSOSize="0" SIOffset="8" ConnectionValidBitNumber="1" HWTypeCode="27" >
+			<Channel Name="SafeDigitalInput01" Mapping="SIX8.0" Variable="siEStop" SODIndex="0x6000" SODSubIndex="0x1" />
+		</Module>
+</IOOffsets>

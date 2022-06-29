@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.10.2.37 FileVersion="4.9"?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="4XP0000.00-K94" Type="4XP0000.00-K94" Version="2.0.1.0">
+    <Connection Connector="X2X1" TargetModule="X20BT9400" TargetConnector="X2X1">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="Supervision" Value="off" />
+  </Module>
+  <Module Name="X20BM11b" Type="X20BM11" Version="1.0.0.1">
+    <Connection Connector="X2X1" TargetModule="X20CP1584" TargetConnector="IF6" />
+  </Module>
+  <Module Name="X20BM33" Type="X20BM33" Version="1.0.0.6">
+    <Connection Connector="X2X1" TargetModule="X20BM33a" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM33a" Type="X20BM33" Version="1.0.0.6">
+    <Connection Connector="X2X1" TargetModule="X20SL8101" TargetConnector="IF1" />
+  </Module>
+  <Module Name="X20BT9400" Type="X20BT9400" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12b" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+  </Module>
+  <Module Name="X20CP1584" Type="X20CP1584" Version="1.9.0.0">
+    <Connector Name="IF2">
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="ShuvSafety_X20CP1584" />
+    <Parameter ID="UserPartitionSize" Value="100" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TimerDevice" Value="X20CP1584.IF3" />
+    <Parameter ID="TaskClassIdleTime" Value="2000" />
+    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic8Duration" Value="2000" />
+    <Parameter ID="Cyclic8Stack" Value="65535" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="CF_User" />
+    <Parameter ID="FileDevicePath1" Value="F:" />
+    <Parameter ID="EthernetDefaultGateway" Value="10.33.7.1" />
+    <Parameter ID="ActivateDns" Value="1" />
+    <Parameter ID="DnsServer1" Value="8.8.8.8" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="admin" />
+    <Parameter ID="FtpUserPassword1" Value="xvJciR0qGc6BLduZ4s/e0wleRAKWYqfD4wcY81RRf7g=" Description="admin" />
+    <Parameter ID="FtpUserSalt1" Value="N370mJBD" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="FTPdevice1" Value="ALL" />
+  </Module>
+  <Module Name="X20MK0211" Type="X20MK0211" Version="1.0.0.3">
+    <Connection Connector="SL" TargetModule="X20SL8101" TargetConnector="SL1" />
+  </Module>
+  <Module Name="X20SI9100" Type="X20SI9100" Version="2.3.1.0">
+    <Connection Connector="SS1" TargetModule="X20TB52b" TargetConnector="SS" />
+    <Connection Connector="SS2" TargetModule="X20TB52c" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM33a" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="SafeModuleID" Value="3" />
+  </Module>
+  <Module Name="X20SL8101" Type="X20SL8101" Version="2.3.0.1">
+    <Connection Connector="PLK1" TargetModule="X20CP1584" TargetConnector="IF3" NodeNumber="4">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Connection Connector="SS1" TargetModule="X20TB52" TargetConnector="SS" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="CycleTimeConfig" Value="2000" />
+  </Module>
+  <Module Name="X20SO4110" Type="X20SO4110" Version="2.2.1.0">
+    <Connection Connector="SS1" TargetModule="X20TB52a" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM33" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
+    <Parameter ID="DigitalOutput01" Value="viaSafeLOGIC" />
+    <Parameter ID="DigitalOutput02" Value="viaSafeLOGIC" />
+    <Parameter ID="DigitalOutput03" Value="viaSafeLOGIC" />
+    <Parameter ID="DigitalOutput04" Value="viaSafeLOGIC" />
+  </Module>
+  <Module Name="X20TB12b" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB52" Type="X20TB52" Version="1.0.0.2" />
+  <Module Name="X20TB52a" Type="X20TB52" Version="1.0.0.2" />
+  <Module Name="X20TB52b" Type="X20TB52" Version="1.0.0.2" />
+  <Module Name="X20TB52c" Type="X20TB52" Version="1.0.0.2" />
+</Hardware>

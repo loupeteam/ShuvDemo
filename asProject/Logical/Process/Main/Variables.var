@@ -1,6 +1,0 @@
-VAR
-	counter : UINT;
-	timer : TON;
-	i : USINT;
-	doLED : ARRAY[0..11] OF BOOL;
-END_VAR

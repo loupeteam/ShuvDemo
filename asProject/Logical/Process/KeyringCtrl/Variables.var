@@ -1,0 +1,4 @@
+VAR
+	updatingPlc : BOOL;
+	updatingSafePlc : BOOL;
+END_VAR

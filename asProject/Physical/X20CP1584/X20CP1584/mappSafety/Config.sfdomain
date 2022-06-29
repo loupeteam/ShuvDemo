@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gSafeDomain" Type="sfdomain">
+    <Group ID="DefaultSettings">
+      <Property ID="SafeDomain" Value="1" />
+      <Property ID="SafeLOGICName" Value="X20SL8101" />
+      <Property ID="SafeLOGICProductId" Value="X20SL8101" />
+      <Property ID="SafeLOGICModulePath" Value="IF3.ST4" />
+      <Property ID="Password" Value="3240e10801416e9bf7f8dc5f028d3305" Description="Hash for the SafeKEY password (ShuvSafety)" />
+      <Property ID="SafeProject" Value="SdProject" Description="SafeDESIGNER project to be created/opened by default" />
+    </Group>
+    <Group ID="DefaultFiles">
+      <Property ID="TargetApplication" Value="SdProject.sfapp" />
+    </Group>
+  </Element>
+</Configuration>

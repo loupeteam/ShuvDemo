@@ -1,0 +1,3 @@
+VAR
+	gLedCtrl : KeyringLedCtrl;
+END_VAR

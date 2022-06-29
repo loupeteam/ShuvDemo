@@ -1,3 +1,13 @@
+(*HW vars*)
+VAR
+	diConfirmUpdate : BOOL;
+	diConfirmSafetyUpdate : BOOL;
+	diReset : BOOL;
+	blink : BOOL;
+	blinkTimer : TON;
+	safePlcOk : BOOL;
+END_VAR
+(**)
 (*Update handling vars*)
 VAR
 	updateMgr : Update_Manager_typ;
@@ -6,6 +16,7 @@ END_VAR
 (*Shuv core vars*)
 VAR
 	shuv : Shuv_typ;
+	shuvSafety : ShuvSafety_typ;
 	fileData : STRING[30000000];
 	diag : Diagnose_typ;
 	fioManage : FIOManage_typ;
@@ -14,12 +25,12 @@ END_VAR
 (*Customizable constants*)
 VAR CONSTANT
 	iotLOGGER_NAME : STRING[80] := 'IoT';
-	iotPIPELINE : STRING[80] := 'ShuvDemo';
-	iotORGANIZATION : STRING[80] := 'Guest';
+	iotPIPELINE : STRING[80] := 'ShuvSafety';
+	iotORGANIZATION : STRING[80] := 'AmazonRobotics';
 END_VAR
 (**)
 (*User settable constants*)
 VAR CONSTANT
-	iotMAX_NUM_VERSIONS : UINT := 5;
+	iotMAX_NUM_VERSIONS : UINT := 2;
 	iotUPDATE_DEVICE : STRING[80] := 'CF_User';
 END_VAR
