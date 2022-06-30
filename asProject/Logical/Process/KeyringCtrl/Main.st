@@ -1,10 +1,10 @@
 PROGRAM _CYCLIC
 	
 	IF (blink) THEN
-		gLedCtrl.led[0] := keyringLED_COLOR_GREEN;
-		gLedCtrl.led[1] := keyringLED_COLOR_YELLOW;
-		gLedCtrl.led[3] := keyringLED_COLOR_GREEN;
-		gLedCtrl.led[4] := keyringLED_COLOR_YELLOW;
+		gLedCtrl.led[0] := keyringLED_COLOR_RED;
+		gLedCtrl.led[1] := keyringLED_COLOR_RED;
+		gLedCtrl.led[3] := keyringLED_COLOR_RED;
+		gLedCtrl.led[4] := keyringLED_COLOR_RED;
 	ELSE 
 		gLedCtrl.led[0] := keyringLED_COLOR_OFF;
 		gLedCtrl.led[1] := keyringLED_COLOR_OFF;
@@ -16,7 +16,7 @@ PROGRAM _CYCLIC
 	
 	// Blink timer utility. 
 	blinkTimer.IN := TRUE;
-	blinkTimer.PT := T#1000ms;
+	blinkTimer.PT := T#100ms;
 	IF (blinkTimer.Q) THEN
 		blinkTimer.IN := FALSE;
 		blink := NOT blink;
