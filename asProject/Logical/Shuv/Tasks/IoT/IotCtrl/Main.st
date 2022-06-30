@@ -91,7 +91,7 @@ PROGRAM _CYCLIC
 	
 	// Blink timer utility. 
 	blinkTimer.IN := TRUE;
-	blinkTimer.PT := T#750ms;
+	blinkTimer.PT := T#250ms;
 	IF (blinkTimer.Q) THEN
 		blinkTimer.IN := FALSE;
 		blink := NOT blink;

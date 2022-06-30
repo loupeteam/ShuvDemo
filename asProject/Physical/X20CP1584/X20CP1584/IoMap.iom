@@ -23,13 +23,11 @@ VAR_CONFIG
 	::gLedCtrl.doLedMap[21] AT %QX."4XP0000.00-K94".DigitalOutput22;
 	::gLedCtrl.doLedMap[22] AT %QX."4XP0000.00-K94".DigitalOutput23;
 	::gLedCtrl.doLedMap[23] AT %QX."4XP0000.00-K94".DigitalOutput24;
-	::IotCtrl:diReset AT %IX."4XP0000.00-K94".DigitalInput06;
-	::SafeCtrl:diReset AT %IX."4XP0000.00-K94".DigitalInput06;
+	::IotCtrl:diConfirmUpdate AT %IX."4XP0000.00-K94".DigitalInput06;
 	::gSafety.out.resetFromPlc AT %QX."X20SL8101".BOOL10001;
 	::gSafety.in.safetyCircuitOk AT %IX."X20SL8101".BOOL00001;
 	::gSafety.in.allEStopsOk AT %IX."X20SL8101".BOOL00002;
 	::gSafety.in.safePlcOk AT %IX."X20SL8101".ModuleOk;
 	::IotCtrl:diConfirmSafetyUpdate AT %IX."4XP0000.00-K94".DigitalInput04;
-	::IotCtrl:diConfirmUpdate AT %IX."4XP0000.00-K94".DigitalInput05;
 	::gSafety.in.safeApplicationRunning AT %IX."X20SL8101".BOOL00003;
 END_VAR
