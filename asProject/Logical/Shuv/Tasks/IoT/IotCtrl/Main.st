@@ -71,14 +71,14 @@ PROGRAM _CYCLIC
 	ELSE
 		gLedCtrl.mode := keyringLED_MODE_DIRECT;
 		IF ((shuv.out.updateAvailable) AND (blink)) THEN
-			gLedCtrl.led[4] := keyringLED_COLOR_WHITE;
+			gLedCtrl.led[5] := keyringLED_COLOR_WHITE;
 		ELSE
-			gLedCtrl.led[4] := keyringLED_COLOR_OFF;
+			gLedCtrl.led[5] := keyringLED_COLOR_OFF;
 		END_IF
 		IF ((shuvSafety.out.updateAvailable) AND (blink)) THEN
-			gLedCtrl.led[3] := keyringLED_COLOR_YELLOW;
+			gLedCtrl.led[2] := keyringLED_COLOR_YELLOW;
 		ELSE
-			gLedCtrl.led[3] := keyringLED_COLOR_OFF;
+			gLedCtrl.led[2] := keyringLED_COLOR_OFF;
 		END_IF
 	END_IF	
 	

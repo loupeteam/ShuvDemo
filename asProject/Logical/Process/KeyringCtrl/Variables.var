@@ -1,4 +1,6 @@
 VAR
+	blink : BOOL;
+	blinkTimer : TON;
 	updatingPlc : BOOL;
 	updatingSafePlc : BOOL;
 END_VAR

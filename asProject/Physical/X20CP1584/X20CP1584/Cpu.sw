@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
-    <Task Name="SafeCtrl" Source="Safety.SafeCtrl.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="SafeCtrl" Source="Safety.SafeCtrl.prg" Memory="UserROM" Language="ANSIC" Debugging="true" Disabled="true" />
     <Task Name="KeyringCtr" Source="Process.KeyringCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />

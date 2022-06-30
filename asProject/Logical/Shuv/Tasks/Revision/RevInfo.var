@@ -1,12 +1,12 @@
 (* RevInfo.var 2.0.0 *)
 VAR CONSTANT
-	revision : STRING[80] := '138e956';
-	revisionDate : STRING[80] := '2022-06-29 13:52:32 -0400';
+	revision : STRING[80] := 'd84126a';
+	revisionDate : STRING[80] := '2022-06-29 14:19:53 -0400';
 	revisionAuthor : STRING[80] := 'andrewmusser';
 	branchName : STRING[80] := 'release/demoSystem';
-	uncommittedChanges : STRING[80] := ' 4 files changed, 20 insertions(+), 15 deletions(-)';
-	buildDate  : STRING[80] := '2022-06-29 14:06:58 -0400';
+	uncommittedChanges : STRING[80] := ' 5 files changed, 27 insertions(+), 19 deletions(-)';
+	buildDate  : STRING[80] := '2022-06-30 10:18:17 -0400';
 	buildConfiguration : STRING[80] := 'X20CP1584';
 	builder : STRING[80] := 'andre';
-	versionId : STRING[80] := '138e956';
+	versionId : STRING[80] := 'd84126a';
 END_VAR
